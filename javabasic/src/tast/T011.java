@@ -10,7 +10,7 @@ public class T011 {
             
             int intValue1 = byteValue; // OK
             int intValue2 = charValue; // 변수 이름을 다르게 설정해야 함
-            short shortValue = charValue; // OK, char를 short로 변환 가능
+            //short shortValue = charValue; // OK, char를 short로 변환 가능
             double doubleValue = byteValue; // OK
         }
 
