@@ -10,4 +10,8 @@ public class ThatCar {
 	ThatCar(){
 		Scanner sc=new Scanner(System.in);
 	}
+	ThatCar(String model){
+		this();
+		this.model=model;
+	}
 }
