@@ -23,9 +23,9 @@ package c06.access;
 
 //클래스와 생성자와 메소드는 일반적으로 public으로 사용한다.
 //그러면 객체 지향 관점에서 틀리지 않습니다.
-public class Modifier {
+public class Modifer {
 	
-	public Modifier() {
+	public Modifer() {
 		
 	}
 	
