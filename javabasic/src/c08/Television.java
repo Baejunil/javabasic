@@ -10,7 +10,7 @@ package c08;
 //알려주기 위해 클래스 선언부에 implements 키워드를 추가하고
 //인터페이스 이름을 명시해야 합니다.
 //그리고 인터페이스에 선언된 추상 메소드의 실체 메소드를 선언해야 합니다.
-public class Televlsion implements RemoteControl{
+public class Television implements RemoteControl{
 	
 	public void turnOn() {
 		System.out.println("TV를 켭니다.");
