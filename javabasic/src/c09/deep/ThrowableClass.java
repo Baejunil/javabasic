@@ -14,6 +14,7 @@ public class ThrowableClass {
 			System.out.println(ints[3]);
 		}catch(ArrayIndexOutOfBoundsException e) {
 			System.out.println("빠른 배열 인덱스를 입력하세요");
+			e.getMessage();
 		}finally {
 			System.out.println("try catch 블록 실행 끝");
 		}
