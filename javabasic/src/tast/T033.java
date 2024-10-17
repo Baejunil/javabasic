@@ -11,11 +11,11 @@ public class T033 {
     
         // 뉴욕 (2025년 2월 27일 00:00)
         ZonedDateTime northAmerica = ZonedDateTime.of(
-                LocalDateTime.of(2025, 2, 27, 0, 0),  // 2025년 2월 27일 00:00
-                ZoneId.of("America/New_York"));  // 뉴욕 시간대
+                LocalDateTime.of(2025, 2, 27, 0, 0),  
+                ZoneId.of("America/New_York"));  
         System.out.println("북미 출시일 (뉴욕 기준): " + northAmerica);
 
-        // 한국 시간대로 변환 
+        // 한국 시간
         ZonedDateTime korea = northAmerica.withZoneSameInstant(ZoneId.of("Asia/Seoul"));
         System.out.println("한국 출시일 (서울 기준): " + korea);
 
