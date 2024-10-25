@@ -1,10 +1,12 @@
 package phonebook;
 
-//model - dto1
+//Model - DTO
 public class Person {
 	
 	private String name;
 	private String phone;
+	private int idx;
+	
 	public String getName() {
 		return name;
 	}
@@ -17,6 +19,14 @@ public class Person {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
+	public int getIdx() {
+		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
+	
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", phone=" + phone + "]";
