@@ -58,6 +58,6 @@ public class UpvoteModelDTO {
 
     @Override
     public String toString() {
-        return "UpvoteModelDTO [number=" + number + ", title=" + title + ", genre=" + genre + ", description=" + description + "]";
+        return "UpvoteModelDTO [추천번호=" + number + ", 제목=" + title + ", 장르=" + genre + ", 스토리설명=" + description + "]";
     }
 }
