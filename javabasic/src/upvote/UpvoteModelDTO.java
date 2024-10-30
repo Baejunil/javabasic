@@ -1,13 +1,14 @@
 package upvote;
 
-// DTO
-public class UpvoteModelDTO {
+import java.io.Serializable;
+
+public class UpvoteModelDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int number;
     private String title;
     private String genre;
     private String description;
 
-    // 생성자
     public UpvoteModelDTO(int number, String title, String genre, String description) {
         this.number = number;
         this.title = title;

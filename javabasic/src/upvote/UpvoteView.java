@@ -4,14 +4,28 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UpvoteView {
-    private Scanner scanner; // Scanner를 클래스 속성으로 정의
+    private Scanner scanner;
 
-    // 생성자
     public UpvoteView(Scanner scanner) {
         this.scanner = scanner;
     }
 
-    // 추천 목록 출력
+    public int showMenu() {
+        System.out.println(" 애니추천 메뉴:");
+        System.out.println("0. 종료");
+        System.out.println("1. 추천애니 추가");
+        System.out.println("2. 추천애니 목록 보기");
+        System.out.println("3. 추천애니 수정");
+        System.out.println("4. 추천애니 삭제");
+        System.out.print("선택: ");
+
+        while (!scanner.hasNextInt()) {
+            System.out.println("잘못된 입력입니다. 숫자를 입력하세요.");
+            scanner.next(); // 잘못된 입력 무시
+        }
+        return scanner.nextInt();
+    }
+
     public void displayRecommendations(List<UpvoteModelDTO> recommendations) {
         System.out.println("추천 목록:");
         if (recommendations.isEmpty()) {
@@ -23,8 +37,8 @@ public class UpvoteView {
         }
     }
 
- // 사용자로부터 제목, 장르, 설명 입력 받기
     public UpvoteModelDTO getRecommendationDetails() {
+        scanner.nextLine(); // 개행 문자 소비
         System.out.print("제목: ");
         String title = scanner.nextLine();
         System.out.print("장르: ");
@@ -32,13 +46,25 @@ public class UpvoteView {
         System.out.print("설명: ");
         String description = scanner.nextLine();
 
-        // 입력 검증
         if (title.isEmpty() || genre.isEmpty() || description.isEmpty()) {
-            throw new IllegalArgumentException("모든 필드를 입력해야 합니다."); // 예외 발생
+            throw new IllegalArgumentException("모든 필드를 입력해야 합니다.");
         }
 
-        // 기본 번호 0을 사용하여 UpvoteModelDTO 객체 생성
         return new UpvoteModelDTO(0, title, genre, description);
     }
 
+    public int getValidIndex(String prompt, int size) {
+        System.out.print(prompt);
+        int index = scanner.nextInt();
+        if (index < 0 || index >= size) {
+            System.out.println("잘못된 번호입니다.");
+            return -1;
+        }
+        return index;
+    }
+
+	public void displayErrorMessage(String message) {
+		// TODO Auto-generated method stub
+		
+	}
 }
